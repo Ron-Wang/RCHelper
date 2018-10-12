@@ -20,71 +20,72 @@
                 android:layout_alignParentStart="true" />
 
             <Button
+                android:id="@+id/btnSingleJ"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/icon6"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnSingle" />
+
+            <Button
                 android:id="@+id/btnDouble"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:background="@drawable/icon2"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/btnSingle" />
+                android:layout_below="@+id/btnSingle" />
+
+            <Button
+                android:id="@+id/btnDoubleJ"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/icon7"
+                android:layout_below="@+id/btnSingleJ"
+                android:layout_toEndOf="@id/btnDouble"/>
 
             <Button
                 android:id="@+id/btnT"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:background="@drawable/icon3"
-                android:layout_below="@+id/btnSingle"/>
-
-            <Button
-                android:id="@+id/btnPre"
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:background="@drawable/icon4"
-                android:layout_below="@+id/btnDouble"
-                android:layout_toEndOf="@+id/btnT" />
-
-            <Button
-                android:id="@+id/btnJ"
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:background="@drawable/icon5"
-                android:layout_below="@+id/btnT"/>
-
-            <Button
-                android:id="@+id/btnSingleJ"
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:background="@drawable/icon6"
-                android:layout_below="@+id/btnPre"
-                android:layout_toEndOf="@+id/btnJ" />
-            <Button
-                android:id="@+id/btnDoubleJ"
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:background="@drawable/icon7"
-                android:layout_below="@+id/btnJ"/>
+                android:layout_below="@+id/btnDouble"/>
 
             <Button
                 android:id="@+id/btnTJ"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:background="@drawable/icon8"
-                android:layout_below="@+id/btnSingleJ"
-                android:layout_toEndOf="@+id/btnDoubleJ" />
+                android:layout_below="@+id/btnDoubleJ"
+                android:layout_toEndOf="@+id/btnT" />
 
             <Button
-                android:id="@+id/btnPreJ"
+                android:id="@+id/btnPre"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/icon4"
+                android:layout_below="@+id/btnT"/>
+
+            <Button
+                android:id="@+id/btnJ"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/icon5"
+                android:layout_below="@+id/btnTJ"
+                android:layout_toEndOf="@+id/btnPre"/>
+
+            <Button
+                android:id="@+id/btnFind"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:background="@drawable/icon9"
-                android:layout_below="@+id/btnDoubleJ"/>
+                android:layout_below="@+id/btnPre"/>
 
             <Button
-                android:id="@+id/btnTable"
+                android:id="@+id/btnList"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:background="@drawable/icon10"
-                android:layout_below="@+id/btnTJ"
-                android:layout_toEndOf="@+id/btnPreJ" />
+                android:layout_below="@+id/btnJ"
+                android:layout_toEndOf="@+id/btnFind"/>
 
 
         </RelativeLayout>

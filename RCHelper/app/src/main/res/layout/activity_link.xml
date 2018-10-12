@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/Btncal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="联系开发者"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sv1"
+        android:layout_below="@+id/Btncal1"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/Img001"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help01"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@+id/Img002"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help02"
+                android:layout_below="@+id/Img001" />
+            <ImageView
+                android:id="@+id/Img003"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help03"
+                android:layout_below="@+id/Img002" />
+            <ImageView
+                android:id="@+id/Img004"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help04"
+                android:layout_below="@+id/Img003" />
+            <ImageView
+                android:id="@+id/Img005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help05"
+                android:layout_below="@+id/Img004" />
+            <ImageView
+                android:id="@+id/Img006"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help06"
+                android:layout_below="@+id/Img005" />
+            <ImageView
+                android:id="@+id/Img007"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help07"
+                android:layout_below="@+id/Img006" />
+            <ImageView
+                android:id="@+id/Img008"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help08"
+                android:layout_below="@+id/Img007" />
+            <ImageView
+                android:id="@+id/Img009"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help09"
+                android:layout_below="@+id/Img008" />
+            <ImageView
+                android:id="@+id/Img010"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help10"
+                android:layout_below="@+id/Img009" />
+            <ImageView
+                android:id="@+id/Img011"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help11"
+                android:layout_below="@+id/Img010" />
+            <ImageView
+                android:id="@+id/Img012"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help12"
+                android:layout_below="@+id/Img011" />
+            <ImageView
+                android:id="@+id/Img013"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help13"
+                android:layout_below="@+id/Img012" />
+            <ImageView
+                android:id="@+id/Img014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help14"
+                android:layout_below="@+id/Img013" />
+            <ImageView
+                android:id="@+id/Img015"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help15"
+                android:layout_below="@+id/Img014" />
+            <ImageView
+                android:id="@+id/Img016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help16"
+                android:layout_below="@+id/Img015" />
+            <ImageView
+                android:id="@+id/Img017"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help17"
+                android:layout_below="@+id/Img016" />
+            <ImageView
+                android:id="@+id/Img018"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help18"
+                android:layout_below="@+id/Img017" />
+            <ImageView
+                android:id="@+id/Img019"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help19"
+                android:layout_below="@+id/Img018" />
+            <ImageView
+                android:id="@+id/Img020"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help20"
+                android:layout_below="@+id/Img019" />
+            <ImageView
+                android:id="@+id/Img021"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help21"
+                android:layout_below="@+id/Img020" />
+            <ImageView
+                android:id="@+id/Img022"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help22"
+                android:layout_below="@+id/Img021" />
+            <ImageView
+                android:id="@+id/Img023"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help23"
+                android:layout_below="@+id/Img022" />
+            <ImageView
+                android:id="@+id/Img024"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help24"
+                android:layout_below="@+id/Img023" />
+            <ImageView
+                android:id="@+id/Img025"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help25"
+                android:layout_below="@+id/Img024" />
+            <ImageView
+                android:id="@+id/Img026"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help26"
+                android:layout_below="@+id/Img025" />
+            <ImageView
+                android:id="@+id/Img027"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help27"
+                android:layout_below="@+id/Img026" />
+            <ImageView
+            android:id="@+id/Img028"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_light"
+            app:srcCompat="@drawable/help28"
+            android:layout_below="@+id/Img027" />
+            <ImageView
+                android:id="@+id/Img029"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help29"
+                android:layout_below="@+id/Img028" />
+            <ImageView
+                android:id="@+id/Img030"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help30"
+                android:layout_below="@+id/Img029" />
+            <ImageView
+                android:id="@+id/Img031"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help31"
+                android:layout_below="@+id/Img030" />
+            <ImageView
+                android:id="@+id/Img032"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help32"
+                android:layout_below="@+id/Img031" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

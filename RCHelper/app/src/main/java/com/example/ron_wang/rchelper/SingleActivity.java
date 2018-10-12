@@ -26,6 +26,7 @@ public class SingleActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapterType,adapterCon,adapterRein;
     private Button btnCal;
     private EditText edittxtH,edittxtB,edittxtA,edittxtK,edittxtM;
+    private String egg;
     float h,b,k,a,m,h0,alphas,xi,As,fc,fy,ft,rho,rhomin;
     float con[] = {7.2f,9.6f,11.9f,14.3f,16.7f,19.1f,21.1f,23.1f,25.3f,27.5f};
     float conft[] = {0.91f,1.10f,1.27f,1.43f,1.5f,1.71f,1.80f,1.89f,1.96f,2.04f};
@@ -157,10 +158,11 @@ public class SingleActivity extends AppCompatActivity {
             m = Float.valueOf(edittxtM.getText().toString());
 
             h0 = h - a;
-            alphas = k * m /(fc * b * h0 * h0) * 1000000;
-            xi = (float)(1 - Math.sqrt(1 - 2 * alphas));
-            As = fc * b * xi * h0 / fy;
-			rho = As / (b * h0);
+            alphas = Math.round(k * m /(fc * b * h0 * h0) * 1000000 * 1000) / 1000.0f;
+            xi = Math.round((1 - Math.sqrt(1 - 2 * alphas)) * 1000) / 1000.0f;
+            As = Math.round(fc * b * xi * h0 / fy );
+			rho = Math.round(As / (b * h0) * 10000) / 10000.0f;
+
             if(type_no == 0){
                 if(rein_no == 0)
                     rhomin = 0.0025f;
@@ -184,20 +186,28 @@ public class SingleActivity extends AppCompatActivity {
                             dialog.cancel();
                         }
                     });
-
-            if(rho < rhomin && alphas < 0.386){
-                alertDialogBuilder.setMessage("已知：\n"
-                        + "fc = " + fc + "N/mm²\n"
-                        + "ft = " + ft + "N/mm²\n"
-                        + "fy = " + fy + "N/mm²\n"
-                        + "h0 = " + h0 + "mm\n"
-                        + "计算过程：\n"
-                        + "αs = KM/(fc*b*h0*h0)\n"
-                        + "   = " + k + "*" + m + "/(" + fc + "*" + b + "*" + h0 + "*" + h0 + ")\n"
-                        + "   = " + alphas + "\n"
-                        + "ξ = 1-sqrt(1-2αs)\n"
+            String s;
+            s = "已知：\n"
+                    + "fc = " + fc + "N/mm²\n"
+                    + "ft = " + ft + "N/mm²\n"
+                    + "fy = " + fy + "N/mm²\n"
+                    + "h0 = h - a = " + h0 + "mm\n"
+                    + "计算过程：\n"
+                    + "αs = KM/(fc*b*h0*h0)\n"
+                    + "    = " + k + "*" + m + "*10^6/(" + fc + "*" + b + "*" + h0 + "*" + h0 + ")\n"
+                    + "    = " + alphas + "\n";
+            if(alphas > 0.386){
+                s += "    > αsb = 0.386\n"
+                        + "即ξ>0.85ξb,超筋\n"
+                        + "能够抵抗的最大弯矩(即KM)为：\n"
+                        + "Mu = αsb*fc*b*h0*h0\n"
+                        + "   = 0.386*" + fc + "*" + b + "*" + h0 + "*" + h0 + "/10^6\n"
+                        + "   = " + Math.round(0.386*fc*b*h0*h0/1000000.0) + "kN·m\n"
+                        + "请重新设计截面尺寸或修改材料强度";
+            } else {
+                s += "ξ = 1-sqrt(1-2αs)\n"
                         + "   = 1-sqrt(1-2*" + alphas + ")\n"
-                        + "   = " + xi + "\n"
+                        + "   = " + xi + "<0.85ξb = 0.522,未超筋\n"
                         + "配筋面积为：\n"
                         + "As = fc*b*ξ*h0/fy\n"
                         + "   = " + fc + "*" + b + "*" + xi + "*" + h0 + "/" + fy + "\n"
@@ -205,51 +215,32 @@ public class SingleActivity extends AppCompatActivity {
                         + "配筋率为：\n"
                         + "ρ = As/(b*h0)\n"
                         + "   = " + As + "/(" + b + "*" + h0 + ")\n"
-                        + "   = " + rho + "\n"
-                        + "   <ρmin = " + rhomin + ",少筋\n"
-                        + "按照最小配筋率配筋，配筋面积为：\n"
-                        + "As = ρmin*b*h0\n"
-                        + "   = " + rhomin + "*" + b + "*" + h0 + "\n"
-                        + "   = " + (int)(rhomin*b*h0) + "mm²\n");
+                        + "   = " + rho + "\n";
+                if(rho < rhomin){
+                    s += "   <ρmin = " + rhomin + ",少筋\n"
+                            + "按照最小配筋率配筋，配筋面积为：\n"
+                            + "As = ρmin*b*h0\n"
+                            + "   = " + rhomin + "*" + b + "*" + h0 + "\n"
+                            + "   = " + Math.round(rhomin*b*h0) + "mm²\n"
+                            + "能够抵抗的最大弯矩(即KM)为：\n"
+                            + "Mu = 7/24*ft*b*h*h\n"
+                            + "   = 7/24*" + ft + "*" + b + "*" + h + "*" + h + "/10^6\n"
+                            + "   = " + Math.round(7.0/24.0*ft*b*h*h/1000000.0) + "kN·m\n";
+                }
+                else{
+                    if(As == 520)
+                        egg =   "\n" + "\n" +
+                                "       *   *     *   *\n" +
+                                "    *         *         *\n" +
+                                "       *             *\n" +
+                                "          *       *\n" +
+                                "              * \n";
+                    else
+                        egg = "";
+                    s += "   >=ρmin = " + rhomin + ",适筋\n" + egg;
+                }
             }
-            else if(alphas > 0.386){
-                alertDialogBuilder.setMessage("已知：\n"
-                        + "fc = " + fc + "N/mm²\n"
-                        + "ft = " + ft + "N/mm²\n"
-                        + "fy = " + fy + "N/mm²\n"
-                        + "h0 = " + h0 + "mm\n"
-                        + "计算过程：\n"
-                        + "αs = KM/(fc*b*h0*h0)\n"
-                        + "   = " + k + "*" + m + "/(" + fc + "*" + b + "*" + h0 + "*" + h0 + ")\n"
-                        + "   = " + alphas + " < αsmin = 0.386\n"
-                        + "即ξ<0.85ξb,超筋\n"
-                        + "请重新设计截面尺寸或修改材料强度");
-            }
-            else{
-                alertDialogBuilder.setMessage("已知：\n"
-                        + "fc = " + fc + "N/mm²\n"
-                        + "ft = " + ft + "N/mm²\n"
-                        + "fy = " + fy + "N/mm²\n"
-                        + "h0 = " + h0 + "mm\n"
-                        + "计算过程：\n"
-                        + "αs = KM/(fc*b*h0*h0)\n"
-                        + "   = " + k + "*" + m + "/(" + fc + "*" + b + "*" + h0 + "*" + h0 + ")\n"
-                        + "   = " + alphas + "\n"
-                        + "ξ = 1-sqrt(1-2αs)\n"
-                        + "   = 1-sqrt(1-2*" + alphas + ")\n"
-                        + "   = " + xi + "\n"
-                        + "配筋面积为：\n"
-                        + "As = fc*b*ξ*h0/fy\n"
-                        + "   = " + fc + "*" + b + "*" + xi + "*" + h0 + "/" + fy + "\n"
-                        + "   = " + As + "mm²\n"
-                        + "配筋率为：\n"
-                        + "ρ = As/(b*h0)\n"
-                        + "   = " + As + "/(" + b + "*" + h0 + ")\n"
-                        + "   = " + rho + "\n"
-                        + "   >=ρmin = " + rhomin + ",适筋");
-            }
-
-
+            alertDialogBuilder.setMessage(s);
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
         }

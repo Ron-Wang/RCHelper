@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/Img1"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="120dp"
         android:background="@android:color/background_light"
         app:srcCompat="@drawable/icon1"
         android:layout_alignParentTop="true"
@@ -53,8 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TxtType"
-                android:layout_marginStart="30dp"
-                android:popupBackground="?android:attr/colorButtonNormal" />
+                android:layout_marginStart="30dp" />
 
             <TextView
                 android:id="@+id/TxtCon"
@@ -73,8 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TxtCon"
-                android:layout_marginStart="30dp"
-                android:popupBackground="?android:attr/colorButtonNormal" />
+                android:layout_marginStart="30dp" />
 
             <TextView
                 android:id="@+id/TxtRein"
@@ -93,8 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TxtRein"
-                android:layout_marginStart="30dp"
-                android:popupBackground="?android:attr/colorButtonNormal" />
+                android:layout_marginStart="30dp" />
 
             <TextView
                 android:id="@+id/TxtH"
@@ -115,7 +112,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@+id/TxtH"
-                android:numeric="decimal"
+                android:inputType="number|numberDecimal"
                 android:text="600" />
 
             <TextView
@@ -137,7 +134,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@+id/TxtB"
-                android:numeric="decimal"
+                android:inputType="number|numberDecimal"
                 android:text="300" />
 
             <TextView
@@ -159,7 +156,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@+id/TxtA"
-                android:numeric="decimal"
+                android:inputType="number|numberDecimal"
                 android:text="25" />
 
             <TextView
@@ -181,7 +178,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@+id/TxtK"
-                android:numeric="decimal"
+                android:inputType="number|numberDecimal"
                 android:text="1.20" />
 
             <TextView
@@ -203,7 +200,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@+id/TxtM"
-                android:numeric="decimal"
+                android:inputType="number|numberDecimal"
                 android:text="100" />
 
         </RelativeLayout>

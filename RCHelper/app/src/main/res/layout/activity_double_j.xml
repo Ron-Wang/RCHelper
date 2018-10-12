@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Img1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/background_light"
+        app:srcCompat="@drawable/icon7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/Btncal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Img1"
+        android:background="@android:color/holo_purple"
+        android:text="校核构件是否安全"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sv1"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/Btncal1"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TxtType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="构件种类"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/SpinType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtType"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/TxtCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="混凝土种类"
+                android:layout_below="@+id/SpinType"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/SpinCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtCon"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+            android:id="@+id/TxtRein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="受拉钢筋种类"
+            android:layout_below="@+id/SpinCon"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/SpinRein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtRein"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/TxtRein_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="受压钢筋种类"
+                android:layout_below="@+id/SpinRein"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/SpinRein_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtRein_"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/TxtH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="截面高度h(mm):"
+                android:layout_below="@+id/SpinRein_"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtH"
+                android:inputType="number|numberDecimal"
+                android:text="600" />
+
+            <TextView
+                android:id="@+id/TxtB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="截面宽度b(mm):"
+                android:layout_below="@+id/EditH"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtB"
+                android:inputType="number|numberDecimal"
+                android:text="300" />
+
+            <TextView
+                android:id="@+id/TxtA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="受拉保护层厚度a(mm):"
+                android:layout_below="@+id/EditB"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtA"
+                android:inputType="number|numberDecimal"
+                android:text="25" />
+
+            <TextView
+                android:id="@+id/TxtA_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="受压保护层厚度a'(mm):"
+                android:layout_below="@+id/EditA"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditA_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtA_"
+                android:inputType="number|numberDecimal"
+                android:text="25" />
+
+            <TextView
+                android:id="@+id/TxtAs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="受拉钢筋面积As(mm^2):"
+                android:layout_below="@+id/EditA_"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditAs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtAs"
+                android:inputType="number|numberDecimal"
+                android:text="6000" />
+
+            <TextView
+                android:id="@+id/TxtAs_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="受压钢筋面积As'(mm^2):"
+                android:layout_below="@+id/EditAs"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditAs_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtAs_"
+                android:inputType="number|numberDecimal"
+                android:text="3000" />
+
+            <TextView
+                android:id="@+id/TxtK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="安全系数K:"
+                android:layout_below="@+id/EditAs_"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtK"
+                android:inputType="number|numberDecimal"
+                android:text="1.20" />
+
+            <TextView
+                android:id="@+id/TxtM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="弯矩设计值M(kN·m):"
+                android:layout_below="@+id/EditK"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtM"
+                android:inputType="number|numberDecimal"
+                android:text="500" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

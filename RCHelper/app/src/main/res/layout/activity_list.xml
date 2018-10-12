@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/Btncal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="查阅设计说明书（联系开发者）"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sv1"
+        android:layout_below="@+id/Btncal1"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                    android:id="@+id/Img001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/background_light"
+                    app:srcCompat="@drawable/help24"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@+id/Img002"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help25"
+                android:layout_below="@+id/Img001" />
+            <ImageView
+                android:id="@+id/Img003"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help26"
+                android:layout_below="@+id/Img002" />
+            <ImageView
+                android:id="@+id/Img004"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help27"
+                android:layout_below="@+id/Img003" />
+            <ImageView
+                android:id="@+id/Img005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help28"
+                android:layout_below="@+id/Img004" />
+            <ImageView
+                android:id="@+id/Img006"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help29"
+                android:layout_below="@+id/Img005" />
+            <ImageView
+                android:id="@+id/Img007"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help30"
+                android:layout_below="@+id/Img006" />
+            <ImageView
+                android:id="@+id/Img008"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                app:srcCompat="@drawable/help31"
+                android:layout_below="@+id/Img007" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Img1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/background_light"
+        app:srcCompat="@drawable/icon9"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/Btncal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Img1"
+        android:background="@android:color/holo_purple"
+        android:text="查找面积相近的配筋方案"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sv1"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/Btncal1"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TxtType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="输入类型"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/SpinType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtType"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/TxtA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="面积As(mm^2)或Asv/s(mm^2/mm):"
+                android:layout_below="@+id/SpinType"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtA"
+                android:inputType="number|numberDecimal"
+                android:text="1000" />
+
+            <TextView
+                android:id="@+id/TxtMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="允许小于面积的百分比（%）,不应超过5%:"
+                android:layout_below="@+id/EditA"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtMin"
+                android:inputType="number|numberDecimal"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/TxtMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="允许大于面积的百分比（%）:"
+                android:layout_below="@+id/EditMin"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/TxtMax"
+                android:inputType="number|numberDecimal"
+                android:text="10" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
