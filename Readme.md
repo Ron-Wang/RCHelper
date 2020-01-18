@@ -37,7 +37,7 @@ RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配�
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SFind_2.png width=300dp>
 </div>
 
-## 下载地址/Downloading
+## 下载（Download）
 
 <div align="center">
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/scan.jpg width=100dp>
@@ -49,7 +49,7 @@ http://app.mi.com/details?id=com.example.ron_wang.rchelper&ref=search</br>
 百度手机助手：</br>
 https://shouji.baidu.com/software/24756518.html</br>
 
-## 使用说明/Manual
+## 使用说明（Manual）
 
 详见：RCHelper(配筋助手)1.0使用说明书.pdf</br>
 https://github.com/Ron-Wang/RCHelper/blob/master/RCHelper(配筋助手)1.0使用说明书.pdf
