@@ -1,5 +1,9 @@
 # RCHelper（配筋助手）v1.0
 
+Android手机上计算配筋App
+
+## 概述（Introduction）
+
 RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配筋设计的Android软件，根据《水工混凝土结构设计规范》（SL191-2008），同时参考《水工钢筋混凝土结构学（第4版）》一书编写。  
 用户可以使用RCHelper进行单筋矩形截面、双筋矩形截面、T型截面等设计及校核，同时，还能根据计算面积得到配筋方案，大大减少了查表配筋的工作量。此外，在“资料查询”中，RCHelper提供了规范中一些常用的设计要求等。  
 
@@ -8,7 +12,9 @@ RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配�
 * 硬件环境：各类Android手机或者平板电脑
 * 软件环境：Android4.2及以上版本
 
-## 运行界面（Operating Interface）
+## 使用说明（Instruction）
+
+* 可以在releases (https://github.com/Ron-Wang/RCHelper/releases) 下载RCHelper.apk
 
 * **主界面（Main Interface）**  
 
@@ -38,7 +44,7 @@ RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配�
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SFind_2.png width=300dp>
 </div>
 
-## 下载（Download）
+## 其他下载（Download）
 
 <div align="center">
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/scan.jpg width=100dp>
@@ -50,7 +56,4 @@ http://app.mi.com/details?id=com.example.ron_wang.rchelper&ref=search</br>
 百度手机助手：</br>
 https://shouji.baidu.com/software/24756518.html</br>
 
-## 使用说明（Manual）
 
-详见：RCHelper(配筋助手)1.0使用说明书.pdf</br>
-https://github.com/Ron-Wang/RCHelper/blob/master/RCHelper(配筋助手)1.0使用说明书.pdf
