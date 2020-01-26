@@ -55,5 +55,6 @@ http://www.anzhi.com/pkg/8eeb_com.example.ron_wang.rchelper.html</br>
 http://app.mi.com/details?id=com.example.ron_wang.rchelper&ref=search</br>
 百度手机助手：</br>
 https://shouji.baidu.com/software/24756518.html</br>
-
-
+  
+## 补充说明
+* 相关问题可联系作者：wangrongxin168@163.com
