@@ -22,14 +22,14 @@ RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配�
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SMain.png width=300dp>
 </div>
 
-* **配筋计算界面（Reinforcement Calculating Interface）**  
+* **配筋计算（Reinforcement Calculating）**  
 
 <div align="center">
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SCal_1.png width=300dp>
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SCal_2.png width=300dp>
 </div>
 
-* **配筋校核界面（Reinforcement Checking Interface）**  
+* **配筋校核（Reinforcement Checking）**  
 
 <div align="center">
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SCheck_1.png width=300dp>
@@ -37,7 +37,7 @@ RCHelper是一款用来进行钢筋混凝土（Reinforced Concrete）截面配�
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SCheck_2.png width=300dp>
 </div>
 
-* **配筋方案界面（Reinforcement Schemes Interface）**  
+* **配筋方案（Reinforcement Schemes）**  
 
 <div align="center">
   <img src=https://github.com/Ron-Wang/RCHelper/blob/master/Image/SFind_1.png width=300dp>
